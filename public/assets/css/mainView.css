@@ -1,0 +1,44 @@
+.imgParent {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.modelImg {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.helmImg {
+  position: absolute;
+  top: 10px;
+  left: 215px;
+}
+
+.chestImg {
+  position: absolute;
+  top: 150px;
+  left: 215px;
+}
+
+.primaryImg {
+  position: absolute;
+  top: 340px;
+  left: 55px;
+}
+
+.secondaryImg {
+  position: absolute;
+  top: 350px;
+  left: 370px;
+}
+
+.setDetail {
+  margin: 0 auto;
+  border-style:solid; 
+  border-width:3px;
+  font-size: 50px;
+  text-align: center;
+}
