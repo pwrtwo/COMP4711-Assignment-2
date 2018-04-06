@@ -69,6 +69,7 @@ class Welcome extends Application
             
             $this->data['pagebody'] = 'welcome_message';
             $this->data['pagetitle'] = 'Set View';
+        
             $this->render();
 	}
 
