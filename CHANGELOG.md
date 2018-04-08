@@ -6,6 +6,10 @@ Team Members:
 - Inochi Tanaka
 - Philip Shin
 
+## Version 2.1---Release Date: Feb 12, 2018---
+
+Add Entity Models
+
 ## Version 1.9---Release Date: Feb 12, 2018---
 
 Fixed active attribute

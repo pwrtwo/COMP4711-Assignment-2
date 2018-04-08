@@ -11,20 +11,19 @@
  *
  * @author Owner
  */
-class Categories extends Entity {
-
-    //id of category (acts as primary key)
-    public $id;
-    //name of category
-    public $name;
-    //description of category
-    public $desc;
+class Categories extends Memory_Model {
     
     /*
-     * Categories model constructor
-     */
-    function __construct()
-    {
-        parent::__construct('../data/Categories.csv', 'id');
+    // over-ride base collection adding, with a limit
+    function add($record) {
+        if ($this->size() >= 30)
+            throw new Exception('The Categories list is full');
     }
+    
+    function update($record) {
+        parent::update($record);
+    }
+    */
+     
+    
 }
