@@ -31,8 +31,8 @@ class Welcome extends Application {
 
         $role = $this->session->userdata('userrole');
         if ($role == ROLE_USER || $role == ROLE_ADMIN) {
-            $this->data['add'] = '<a href="/MaintainSet/Add" role="button" class="btn">Add</a>';
-            $this->data['edit'] = '<a href="/MaintainSet/Edit/' . $id . '" role="button" class="btn">Edit</a>';
+            $this->data['add'] = '<a href="/Add/Initialize" role="button" class="btn">Add</a>';
+            $this->data['edit'] = '<a href="/Edit/Initialize/' . $id . '" role="button" class="btn">Edit</a>';
         } else {
             
             $this->data['add'] = '';
