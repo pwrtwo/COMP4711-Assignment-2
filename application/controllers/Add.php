@@ -2,23 +2,21 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class MaintainSet extends Application {
+class Add extends Application {
 
     //put your code here
-    public function Add() {
+    public function Initialize() {
         $role = $this->session->userdata('userrole');
         if ($role == ROLE_GUEST) {
             redirect($_SERVER['HTTP_REFERER']); // back where we came from
             return;
         }
-
         $items = $this->Accessories->all();
-
         $h = array();
         $c = array();
         $p = array();
         $s = array();
-
+        
         for ($x = 0; $x < sizeof($items); $x++) {
             $acc = $this->Accessories->get($x);
             $temp = array('item' => '<option value="' . $acc->id . '">' . $acc->name . '</option>');
@@ -36,21 +34,17 @@ class MaintainSet extends Application {
                 $s[] = $temp;
             }
         }
-
         $this->data['h'] = $h;
         $this->data['c'] = $c;
         $this->data['p'] = $p;
         $this->data['s'] = $s;
-
-
         $this->data['setNum'] = sizeof($items = $this->Sets->all()) + 1;
         $this->data['pagetitle'] = 'Add Set';
         $this->data['pagebody'] = 'addSet';
-
         $this->render();
     }
 
-    public function AddSet() {
+    public function OnSubmit() {
         $role = $this->session->userdata('userrole');
         if ($role == ROLE_GUEST) {
             redirect($_SERVER['HTTP_REFERER']); // back where we came from
@@ -59,17 +53,14 @@ class MaintainSet extends Application {
         $this->load->model('Sets');
         $this->load->library('form_validation');
         $this->form_validation->set_rules($this->Sets->rules());
+        $set = $this->input->post();
+        $set = (object) $set;
 
-        $newSet = $this->input->post();
-        var_dump($newSet);
-        $newSet = (object) $newSet;
-        
         if ($this->form_validation->run()) {
-            $this->Sets->add($newSet);
+            $this->Sets->add($set);
         } else {
             $this->alert(validation_errors(), 'danger');
         }
         redirect('/Welcome/set/' . $this->Sets->highest());
     }
-
 }

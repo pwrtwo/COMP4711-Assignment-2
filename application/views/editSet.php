@@ -1,16 +1,16 @@
 <div class="container">
     <div class="row">
         <div>
-            <h1>Add a set</h1>
+            <h1>Edit a set</h1>
         </div>
     </div>
 
     <div>
-        <form action="OnSubmit" method="post">
-            <input type="hidden" name="id" value="{setNum}" />
+        <form action="/Edit/OnSubmit" method="post">
+            <input type="hidden" name="id" value="{setId}" />
             <div class="form-group">
                 <label for="addName">Name</label>
-                <input type="text" name="n"><br>
+                <input type="text" name="n" value="{setName}"><br>
             </div>
 
             <div class="form-group">
@@ -49,8 +49,8 @@
                     {/s}
                 </select>
             </div>
-            <button type="submit" class="btn btn-success">Add</button>
+            <button type="submit" class="btn btn-success">Edit</button>
         </form>
-        <button onclick="location.href = '/welcome';" id="myButton" class="btn btn-danger" >Cancel</button>
+        <button onclick="location.href = '/welcome/';" id="myButton" class="btn btn-danger" >Cancel</button>
     </div>
 </div>

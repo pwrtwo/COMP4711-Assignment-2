@@ -1,4 +1,6 @@
 <table class="table table-bordered">
+    {mtceA}
+    {mtceC}
   <thead>
     <tr>
       <th><p>Image</p></th>
