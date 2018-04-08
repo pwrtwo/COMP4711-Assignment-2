@@ -12,11 +12,6 @@ class Add extends Application {
             return;
         }
         $items = $this->Accessories->all();
-        $h = array();
-        $c = array();
-        $p = array();
-        $s = array();
-        
         for ($x = 0; $x < sizeof($items); $x++) {
             $acc = $this->Accessories->get($x);
             $temp = array('item' => '<option value="' . $acc->id . '">' . $acc->name . '</option>');

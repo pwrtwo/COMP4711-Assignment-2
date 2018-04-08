@@ -13,20 +13,13 @@ class Edit extends Application {
         }
         $items = $this->Accessories->all();
         $set = $this->Sets->get($id);
-        $h = array();
-        $c = array();
-        $p = array();
-        $s = array();
-
         for ($x = 0; $x < sizeof($items); $x++) {
             $acc = $this->Accessories->get($x);
-
             if ($set->helmId == $acc->id || $set->chestId == $acc->id || $set->primaryId == $acc->id || $set->secondaryId == $acc->id) {
                 $temp = array('item' => '<option selected value="' . $acc->id . '">' . $acc->name . '</option>');
             } else {
                 $temp = array('item' => '<option value="' . $acc->id . '">' . $acc->name . '</option>');
             }
-
             if ($acc->catId == 0) {
                 $h[] = $temp;
             }

@@ -8,12 +8,8 @@
     <div>
         <form action="OnSubmit" method="post">
             <input type="hidden" name="id" value="{setId}" />
-            <div class="form-group">
                 <label for="addName">Name</label>
                 <input type="text" name="n"><br>
-            </div>
-
-            <div class="form-group">
                 <label for="addHelm">Helm</label>
                 <select name="h" id="addHelm" class="form-control">
                     <option selected></option>
@@ -21,8 +17,6 @@
                     {item}
                     {/h}
                 </select>
-            </div>
-            <div class="form-group">
                 <label for="addChest">Chest</label>
                 <select name="c" id="addChest" class="form-control">
                     <option selected></option>
@@ -30,8 +24,6 @@
                     {item}
                     {/c}
                 </select>
-            </div>
-            <div class="form-group">
                 <label for="addPrimary">Primary</label>
                 <select name="p" id="addPrimary" class="form-control">
                     <option selected></option>
@@ -39,8 +31,6 @@
                     {item}
                     {/p}
                 </select>
-            </div>
-            <div class="form-group">
                 <label for="addSecondary">Secondary</label>
                 <select name="s" id="addSecondary" class="form-control">
                     <option selected></option>
