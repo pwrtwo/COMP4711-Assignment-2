@@ -20,7 +20,6 @@ class Add extends Application {
         for ($x = 0; $x < sizeof($items); $x++) {
             $acc = $this->Accessories->get($x);
             $temp = array('item' => '<option value="' . $acc->id . '">' . $acc->name . '</option>');
-
             if ($acc->catId == 0) {
                 $h[] = $temp;
             }
@@ -38,7 +37,7 @@ class Add extends Application {
         $this->data['c'] = $c;
         $this->data['p'] = $p;
         $this->data['s'] = $s;
-        $this->data['setNum'] = sizeof($items = $this->Sets->all()) + 1;
+        $this->data['setId'] = sizeof($items = $this->Sets->all()) + 1;
         $this->data['pagetitle'] = 'Add Set';
         $this->data['pagebody'] = 'addSet';
         $this->render();

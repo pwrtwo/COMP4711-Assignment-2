@@ -7,7 +7,7 @@
 
     <div>
         <form action="OnSubmit" method="post">
-            <input type="hidden" name="id" value="{setNum}" />
+            <input type="hidden" name="id" value="{setId}" />
             <div class="form-group">
                 <label for="addName">Name</label>
                 <input type="text" name="n"><br>

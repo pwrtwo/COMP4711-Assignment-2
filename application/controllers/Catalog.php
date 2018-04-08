@@ -26,15 +26,6 @@ class Catalog extends Application {
      */
 
     function index() {
-        $role = $this->session->userdata('userrole');
-        if ($role == ROLE_ADMIN && $role != ROLE_USER && $role != ROLE_GUEST) {
-            $this->data['mtceA'] = '<a href="/Maintenance/Initialize" role="button" class="btn btn-warning">Edit Accesories</a>';
-            $this->data['mtceC'] = '<a href="/Maintenance/Initialize" role="button" class="btn btn-warning">Edit Categories</a>';
-        } else {
-            $this->data['mtceA'] = '';
-            $this->data['mtceC'] = '';
-        }
-
         //Retrieve csv data
         $accessories = $this->Accessories->all();
         $categories = $this->Categories->all();
