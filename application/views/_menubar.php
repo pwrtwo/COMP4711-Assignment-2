@@ -9,7 +9,7 @@
         <ul class="navbar-nav mr-auto">
             {menulist}
                 <li class="nav-item">
-                    <a class="nav-link" href=".{link}">{name}</a>
+                    <a class="nav-link" href="{link}">{name}</a>
                 </li>
             {/menulist}
         </ul>
@@ -24,9 +24,9 @@
             <li class="dropdown align-self-end" id="role-dropdown">
                 <a class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" href="#">User Role<b class="caret"></b></a>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                    <li class="dropdown-item"><a href="./roles/actor/Guest">Guest</a></li>
-                    <li class="dropdown-item"><a href="./roles/actor/User">User</a></li>
-                    <li class="dropdown-item"><a href="./roles/actor/Admin">Admin</a></li>
+                    <li class="dropdown-item"><a href="/roles/actor/Guest">Guest</a></li>
+                    <li class="dropdown-item"><a href="/roles/actor/User">User</a></li>
+                    <li class="dropdown-item"><a href="/roles/actor/Admin">Admin</a></li>
                 </ul>
             </li>
         </ul>
