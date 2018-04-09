@@ -36,9 +36,49 @@ class Set extends Entity{
     public function setName($value) {
     if (empty($value))
         throw new Exception('A Name cannot be empty');
-    if (strlen($value) > 30)
-        throw new Exception('A Name cannot be longer than 30 characters');
+    if (strlen($value) > 64)
+        throw new Exception('A Name cannot be longer than 64 characters');
     $this->name = $value;
     return $this;
-    } 
+    }
+    
+    public function setHelmId($value) {
+        if (empty($value))
+            throw new Exception('A helmId cannot be empty');
+        $allowed = [0, 1, 2, 3];
+        if (!in_array($value, $allowed))
+            throw new Exception('A helmid must be in 0 - 3');
+        $this->helmId = $value;
+        return $this;
+    }
+    
+    public function setChestId($value) {
+        if (empty($value))
+            throw new Exception('A chestid cannot be empty');
+        $allowed = [0, 1, 2, 3];
+        if (!in_array($value, $allowed))
+            throw new Exception('A chestid must be in 0 - 3');
+        $this->chestId = $value;
+        return $this;
+    }
+    
+    public function setPrimaryId($value) {
+        if (empty($value))
+            throw new Exception('A primaryid cannot be empty');
+        $allowed = [0, 1, 2, 3];
+        if (!in_array($value, $allowed))
+            throw new Exception('A primaryid must be in 0 - 3');
+        $this->primaryId = $value;
+        return $this;
+    }
+    
+    public function setSecondaryId($value) {
+        if (empty($value))
+            throw new Exception('A secondaryid cannot be empty');
+        $allowed = [0, 1, 2, 3];
+        if (!in_array($value, $allowed))
+            throw new Exception('A secondaryid must be in 0 - 3');
+        $this->secondaryId = $value;
+        return $this;
+    }
 }

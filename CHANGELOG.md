@@ -7,6 +7,10 @@ Team Members:
 - Philip Shin
 - Yan Wang
 
+## Version 2.3---Release Date: Apr 08, 2018---
+
+Edit accessories and categories (simple)
+
 ## Version 2.2---Release Date: Apr 08, 2018---
 
 Edit and add sets

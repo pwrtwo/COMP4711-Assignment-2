@@ -30,7 +30,7 @@ class Catalog extends Application {
         $role = $this->session->userdata('userrole');
         if ($role == ROLE_ADMIN) {
             $this->data['MtceA'] = '<a href="/EditAccessory/Index" role="button" class="btn btn-info">Accessory</a>';
-            $this->data['MtceC'] = '<a href="/Catalog/Index" role="button" class="btn btn-primary">Category</a>';
+            $this->data['MtceC'] = '<a href="/EditCategory/Index" role="button" class="btn btn-primary">Category</a>';
         } else {
             $this->data['MtceA'] = '';
             $this->data['MtceC'] = '';
