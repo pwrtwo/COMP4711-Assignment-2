@@ -26,6 +26,12 @@ class Catalog extends Application {
      */
     function index()
     {
+        $role = $this->session->userdata('userrole');
+        if ($role == ROLE_ADMIN) {
+            $this->data['change'] = '<a href="/Catalog/Change" role="button" class="btn">Change</a>';
+        } else {
+            $this->data['change'] = '';
+        }
         //Retrieve csv data
         $accessories = $this->Accessories->all();
         $categories = $this->Categories->all();
@@ -39,4 +45,16 @@ class Catalog extends Application {
         $this->data['pagetitle'] = 'Catalog';
         $this->render();
     }
+    
+    //put your code here
+    public function Change() {
+        $role = $this->session->userdata('userrole');
+        if ($role == ROLE_GUEST || ROLE_USER) {
+            redirect($_SERVER['HTTP_REFERER']); // back where we came from
+            return;
+        } else {
+            
+        }
+    }
+    
 }
